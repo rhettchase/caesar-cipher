@@ -4,12 +4,15 @@
 
 ## Project Description
 
-The application contains an `encrypt` function that takes in a plain text phrase and a numeric shift, with the phrase shifted that many letters: e.g. encrypt(‘abc’,1) would return ‘bcd’. = E.g. encrypt(‘abc’, 10) would return ‘klm’.
+The application contains an `encrypt` function that takes in a plain text phrase and a numeric shift, with the phrase shifted that many letters:
+
+- e.g. encrypt(‘abc’,1) would return ‘bcd’
+- e .g. encrypt(‘abc’, 10) would return ‘klm’
 
 - shifts that exceed 26 should wrap around.
-  - e.g. encrypt(‘abc’,27) would return ‘bcd’.
-- shifts that push a letter out or range should wrap around.
-  - e.g. encrypt(‘zzz’,1) would return ‘aaa’.
+  - e.g. encrypt(‘abc’,27) would return ‘bcd’
+- shifts that push a letter out or range should wrap around
+  - e.g. encrypt(‘zzz’,1) would return ‘aaa’
 
 The app also contains a `decrypt` function that takes in encrypted text and numeric shift which will restore the encrypted text back to its original form when correct key is supplied.
 
