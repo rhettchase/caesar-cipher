@@ -16,7 +16,7 @@ The application contains an `encrypt` function that takes in a plain text phrase
 
 The app also contains a `decrypt` function that takes in encrypted text and numeric shift which will restore the encrypted text back to its original form when correct key is supplied.
 
-Lastly, the app contains a `crack` function that will decode the cipher so that an encrypted message can be transformed into its original state without access to the key.
+Lastly, the app contains a `crack` function that decodes the cipher so that an encrypted message can be transformed into its original state without access to the key. It uses a check against a list of English words to try all possible shifts and see which one results in a string that makes the most sense in English.
 
 ### Author: Rhett Chase
 
