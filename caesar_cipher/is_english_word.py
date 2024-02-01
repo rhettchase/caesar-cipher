@@ -8,8 +8,7 @@ def is_english(text):
     """
     Determines if a given text is predominantly in English.
 
-    This function checks the proportion of words in the input text that are found in predefined lists of English words and names. It first removes any punctuation from the text, then splits it into words. Each word is compared against the word_list (a list of English words) and lowercase_name_list (a list of English names in lowercase). The text is considered English 
-    if more than 50% of its words are found in these lists.
+    This function checks the proportion of words in the input text that are found in predefined lists of English words and names. It first removes any punctuation from the text, then splits it into words. Each word is compared against the word_list (a list of English words) and lowercase_name_list (a list of English names in lowercase). The text is considered English if more than 50% of its words are found in these lists.
 
     Args:
     - text (str): The text to be analyzed.
