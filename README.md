@@ -28,7 +28,7 @@ Lastly, the app contains a `crack` function that will decode the cipher so that 
 
 ### Setup
 
-- N/A
+- `pip install nltk`
 
 #### `.env` requirements (where applicable)
 

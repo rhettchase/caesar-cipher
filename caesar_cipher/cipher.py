@@ -1,3 +1,5 @@
+from caesar_cipher.is_english_word import is_english
+
 def encrypt(plain, shift):
     
     encrypted_text = ""
@@ -25,10 +27,14 @@ def encrypt(plain, shift):
         
 
 def decrypt(encrypted_text, shift):
-    pass
+    return encrypt(encrypted_text, -shift)
 
-def crack():
-    pass
+def crack(encrypted_text):
+    for shift in range(26):
+        decrypted = decrypt(encrypted_text, shift)
+        if is_english(decrypted):
+            return decrypted
+    return ""
 
 if __name__ == "__main__":
     pass
