@@ -1,7 +1,18 @@
 from caesar_cipher.is_english_word import is_english
 
 def encrypt(plain, shift):
-    
+    """
+    Encrypts a plaintext string using the Caesar cipher.
+
+    This function shifts each alphabetic character in the input string by a specified number of places down the alphabet. Characters are wrapped around if the shift takes them past 'z' or 'Z'. Non-alphabetic characters (like numbers, spaces, punctuation) are left unchanged.
+
+    Args:
+    - plain (str): The plaintext string to be encrypted.
+    - shift (int): The number of places to shift each character.
+
+    Returns:
+    - str: The encrypted text.
+    """
     encrypted_text = ""
     num_of_chars = 26
     
@@ -27,10 +38,33 @@ def encrypt(plain, shift):
         
 
 def decrypt(encrypted_text, shift):
+    """
+    Decrypts a Caesar cipher encrypted string.
+
+    This function reverses the encryption process of the Caesar cipher. It shifts each alphabetic character in the encrypted string back by the specified number of places.
+
+    Args:
+    - encrypted_text (str): The text to be decrypted.
+    - shift (int): The number of places that each character was shifted during encryption.
+
+    Returns:
+    - str: The decrypted (original) text.
+    """
     return encrypt(encrypted_text, -shift)
 
 def crack(encrypted_text):
-    for shift in range(26):
+    """
+    Attempts to decrypt a Caesar cipher encrypted string by brute force.
+
+    This function tries all possible shifts (0 to 25) to decrypt the input string. It uses the 'is_english' function to check if the decrypted text is meaningful in English. Once a meaningful decryption is found, it is returned.
+
+    Args:
+    - encrypted_text (str): The text to be decrypted.
+
+    Returns:
+    - str: The decrypted text if a valid English string is found, otherwise an empty string.
+    """
+    for shift in range(26): # try all possible shifts 
         decrypted = decrypt(encrypted_text, shift)
         if is_english(decrypted):
             return decrypted
